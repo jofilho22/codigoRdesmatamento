@@ -1,0 +1,143 @@
+#Os dados brutos foram importados de tabelas que eu montei no Excel nomeadas como 'dadosDesmatamento','dadosSoja', 'dadosMadeira', 'dadosCana', 'dadosBovinos'.
+
+#install.packages("dplyr")
+library(dplyr)
+
+#install.packages("ggplot2")
+library(ggplot2)
+
+# Gráfico de barras Desmatamento Acre
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = ac) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Acre") + theme_minimal()
+
+# Gráfico de barras Desmatamento Amapá
+dadosDesmatamento %>%filter(!is.na(ano)) %>%ggplot() +aes(x = ano, weight = ap) +geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Amapá") + theme_minimal()
+
+# Gráfico de barras Desmatamento Amazonas
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = am) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Amazonas") + theme_minimal()
+
+# Gráfico de barras Desmatamento Maranhão
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = ma) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Maranhão") + theme_minimal()
+
+# Gráfico de barras Desmatamento Mato Grosso
+dadosDesmatamento %>%filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = mt) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Mato Grosso") + theme_minimal()
+
+# Gráfico de barras Desmatamento Pará
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = pa) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Pará") + theme_minimal()
+
+# Gráfico de barras Desmatamento Rondônia
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = ro) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Rondônia") + theme_minimal()
+
+# Gráfico de barras Desmatamento do Roraima
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = rr) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Roraima") + theme_minimal()
+
+# Gráfico de barras Desmatamento Tocantins
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = to) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Tocantins") + theme_minimal()
+
+# Gráfico de barras Desmatamento Amazônia Legal
+dadosDesmatamento %>% filter(!is.na(ano)) %>% ggplot() + aes(x = ano, weight = amlegal) + geom_bar(fill = "#35b779") + labs(x = "Ano (2004 - 2019)", y = "Área (km²)", title = "Desmatamento Amazônia Legal") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Acre
+ggplot(dadosSoja) + aes(x = ano, weight = ac) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (AC)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Amazonas
+ggplot(dadosSoja) + aes(x = ano, weight = am) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (AM)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Amapá
+ggplot(dadosSoja) + aes(x = ano, weight = ap) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (AP)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Maranhão
+ggplot(dadosSoja) + aes(x = ano, weight = ma) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (MA)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Mato Grosso
+ggplot(dadosSoja) + aes(x = ano, weight = mt) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (MT)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Pará
+ggplot(dadosSoja) + aes(x = ano, weight = pa) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (PA)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Rondônia
+ggplot(dadosSoja) + aes(x = ano, weight = ro) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (RO)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Roraima
+ggplot(dadosSoja) + aes(x = ano, weight = rr) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (RR)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Tocantins
+ggplot(dadosSoja) + aes(x = ano, weight = to) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (TO)") + theme_minimal()
+
+# Gráfico de barras Produção de Soja Amazônia Legal
+ggplot(dadosSoja) + aes(x = ano, weight = amlegal) + geom_bar(fill = "#fdc926") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Soja (Amazônia Legal)") + theme_minimal()
+
+# Gráfico de barras Produção de Madeira Amapá
+ggplot(dadosMadeira) + aes(x = ano, weight = ap) + geom_bar(fill = "#a50f15") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (m³)", title = "Produção Madeira (AP)") + theme_minimal()
+
+# Gráfico de barras Produção de Madeira Maranhão
+ggplot(dadosMadeira) + aes(x = ano, weight = ma) + geom_bar(fill = "#a50f15") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (m³)", title = "Produção Madeira (MA)") + theme_minimal()
+
+# Gráfico de barras Produção de Madeira Pará
+ggplot(dadosMadeira) + aes(x = ano, weight = pa) + geom_bar(fill = "#a50f15") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (m³)", title = "Produção Madeira (PA)") + theme_minimal()
+
+# Gráfico de barras Produção de Madeira Tocantins
+ggplot(dadosMadeira) + aes(x = ano, weight = to) + geom_bar(fill = "#a50f15") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (m³)", title = "Produção Madeira (TO)") + theme_minimal()
+
+# Gráfico de barras Produção de Madeira Amazônia Legal
+ggplot(dadosMadeira) + aes(x = ano, weight = amlegal) + geom_bar(fill = "#a50f15") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (m³)", title = "Produção Madeira (Amazônia Legal)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Acre
+ggplot(dadosCana) + aes(x = ano, weight = ac) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (AC)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Amazonas
+ggplot(dadosCana) + aes(x = ano, weight = am) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (AM)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Amapá
+ggplot(dadosCana) + aes(x = ano, weight = ap) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (AP)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Maranhão
+ggplot(dadosCana) + aes(x = ano, weight = ma) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (MA)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Mato Grosso
+ggplot(dadosCana) + aes(x = ano, weight = mt) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (MT)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Pará
+ggplot(dadosCana) + aes(x = ano, weight = pa) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (PA)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Rondônia
+ggplot(dadosCana) + aes(x = ano, weight = ro) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (RO)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Roraima
+ggplot(dadosCana) + aes(x = ano, weight = rr) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (RR)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Tocantins
+ggplot(dadosCana) + aes(x = ano, weight = to) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (TO)") + theme_minimal()
+
+# Gráfico de barras Produção de Cana Amazônia Legal
+ggplot(dadosCana) + aes(x = ano, weight = amlegal) + geom_bar(fill = "#b4de2c") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (toneladas)", title = "Produção Cana-de-Açúcar (Amazônia Legal)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Acre
+ggplot(dadosBovino) + aes(x = ano, weight = ac) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (AC)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Amazonas
+ggplot(dadosBovino) + aes(x = ano, weight = am) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (AM)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Amapá
+ggplot(dadosBovino) + aes(x = ano, weight = ap) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (AP)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Maranhão
+ggplot(dadosBovino) + aes(x = ano, weight = ma) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (MA)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Mato Grosso
+ggplot(dadosBovino) + aes(x = ano, weight = mt) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (MT)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Pará
+ggplot(dadosBovino) + aes(x = ano, weight = pa) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (PA)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Rondônia
+ggplot(dadosBovino) + aes(x = ano, weight = ro) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (RO)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Roraima
+ggplot(dadosBovino) + aes(x = ano, weight = rr) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (RR)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Tocantins
+ggplot(dadosBovino) + aes(x = ano, weight = to) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (TO)") + theme_minimal()
+
+# Gráfico de barras Produção de Bovinos Amazônia Legal
+ggplot(dadosBovino) + aes(x = ano, weight = amlegal) + geom_bar(fill = "#9c179e") + labs(x = "Ano (2004 - 2016)", y = "Quantidade (cabeças)", title = "Produção Bovinos (Amazônia Legal)") + theme_minimal()
+
